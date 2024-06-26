@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Care Clinic at Berkeley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Admin Team</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Junior Care Clinic</h1>
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p>Insert your mission statement here. This is where you can easily update the content to reflect JCC's goals and values.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Junior Care Clinic at Berkeley. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    color: #4CAF50;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Add a class to highlight the current page in the navigation
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
+    // Example of dynamic content loading (you can expand on this)
+    const missionSection = document.getElementById('mission');
+    if (missionSection) {
+        // You can replace this with an actual API call or content management system
+        const missionStatement = "Our mission is to provide high-quality care and support to junior members of our community.";
+        missionSection.querySelector('p').textContent = missionStatement;
+    }
+});
