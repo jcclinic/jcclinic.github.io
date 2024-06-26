@@ -66,7 +66,7 @@ header nav:hover > a:not(:hover) {
 
 .home .title {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: #f2f2ff;
